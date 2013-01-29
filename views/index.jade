@@ -1,0 +1,62 @@
+doctype 5
+html(lang="es")
+	head
+		title = "Chat by UrielHdz"
+		meta(charset='utf-8')
+		link(href='/styles/bootstrap.css',rel='stylesheet')
+		link(href='/styles/mycss.css',rel='stylesheet')
+		
+	body
+		div			
+			div.row.top
+				section#presentacion.span8
+					
+					iframe(
+						src="https://docs.google.com/presentation/d/1-rmX4lhuBcFgtbDBJsIyBOQcDBlkaH0MMRoWukwdRk8/embed?start=false&loop=false&delayms=3000", 
+						frameborder="0", 
+						width="480", 
+						height="389", 
+						allowfullscreen="true",
+						mozallowfullscreen="true", 
+						webkitallowfullscreen="true")
+				section.span6
+					div#editor
+			section#middle.row
+				div#apuntes.span5
+					h2	Apuntes
+					ul
+						li Visita 
+							a(href='http://www.youtube.com/dxvtuts') este link
+							li Otro consejo para la expo
+							li Lorem no sé qué más sigue Ipsum
+				div.span5
+					h1 Equipo 4
+					form#formChat
+						input(type='text', name='msg', id='msg', required, placeholder='Participa en el chat')
+						input( type='submit', value='Enviar', class='btnLogIn', id="sendM")
+			nav.bottom-navigation
+				ul
+					span Descargas
+					li Presentación
+					li Práctica
+					li Lista de Cotejo
+				button#abrirChat Abrir/OcultarChat		
+		div#ingresaNombre
+			div#setNombre.pantalla
+				form#formNombre.form
+					label(for='name',data-icon='u') Nombre:&nbsp&nbsp&nbsp
+					input(type='text', name='name',id='name',placeholder='Coloca tu nombre')
+					input(type='submit', value='¡Listo!', class='btnLogIn', id='setNick')	
+		div#contChat
+
+			div#miChat
+				div#chat
+					div#hChat Equipo 4 - javascript
+					div#chatInsite
+
+	script(src='/socket.io/socket.io.js')
+	script(src='http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js')
+	script(src='js/jquery.js')
+	script(src='scripts/scriptPrincipal.js')
+	script(src='js/myjs.js')
+			
